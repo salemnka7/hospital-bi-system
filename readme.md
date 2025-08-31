@@ -1,5 +1,6 @@
 # Hospital BI System
 
+![Hospital BI System](docs/project.png)
 A full-stack Business Intelligence solution for hospital operations, combining a transactional database, an enterprise data warehouse, ETL pipelines (SSIS), analytical dashboards (Power BI), paginated reports (SSRS), and a production-ready web application (ASP.NET Core API + React).
 
 ---
