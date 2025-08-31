@@ -1,0 +1,196 @@
+/* Import Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Login Container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Eye-catching gradient background */
+  background-image: linear-gradient(to bottom right, #a7bfe8, #6190e8); /* Soft blue to vibrant blue */
+  padding: 20px; /* Add some padding for smaller screens */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Login Card */
+.login-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow */
+  text-align: center;
+  width: 100%;
+  max-width: 450px; /* Max width for larger screens */
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.login-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Logo */
+.login-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 25px;
+  border: 4px solid #6190e8; /* Border matching primary color */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles and Subtitles */
+.login-title {
+  font-size: 2.2rem;
+  font-weight: 800; /* Extra bold */
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+/* Form Group (Label + Input) */
+.login-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.login-form input::placeholder {
+  color: #aaaaaa;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #6190e8; /* Focus border color */
+  box-shadow: 0 0 0 3px rgba(97, 144, 232, 0.3); /* Soft focus shadow */
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c; /* Red color for errors */
+  font-size: 0.9rem;
+  margin-top: -10px; /* Adjust margin to be closer to input */
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  /* Gradient background for the button */
+  background-image: linear-gradient(to right, #6190e8, #a7bfe8); /* Blue gradient */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(97, 144, 232, 0.4); /* Shadow for button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button:hover {
+  background-image: linear-gradient(to right, #4a7ed1, #8bb3e6); /* Slightly darker gradient on hover */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 8px 20px rgba(97, 144, 232, 0.5); /* More pronounced shadow */
+}
+
+.login-button:disabled {
+  background-image: linear-gradient(to right, #cccccc, #aaaaaa); /* Greyed out when disabled */
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  font-size: 0.9rem;
+  color: #6190e8; /* Blue color for link */
+  margin-top: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #4a7ed1; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 30px 20px;
+    margin: 15px; /* Add margin to prevent sticking to edges */
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .login-form input {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .login-button {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+}
